@@ -83,6 +83,9 @@ node default {
       'gnu-tar'
     ]:
   }
+  
+  # communications
+  include skype
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
