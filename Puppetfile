@@ -29,7 +29,8 @@ github "nodejs",     "2.2.0"
 github "repository", "2.0.2"
 github "ruby",       "4.1.0"
 github "stdlib",     "4.0.2", :repo => "puppetlabs/puppetlabs-stdlib"
-github "sudo",       "1.0.0"
+github "sudo",       "1.0.0",
+github "skype",       "1.0.3"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
