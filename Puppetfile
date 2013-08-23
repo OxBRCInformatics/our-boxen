@@ -17,7 +17,7 @@ github "boxen",      "3.0.2"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
-
+github "osx",		"1.6.0"
 github "autoconf",   "1.0.0"
 github "dnsmasq",    "1.0.0"
 github "gcc",        "2.0.1"

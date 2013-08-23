@@ -1,6 +1,7 @@
 class people::spikeheap {
 	# TODO add to puppetfile
   include emacs   
+	include osx
 	include zsh
 	include chrome
 	include firefox
