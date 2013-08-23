@@ -21,9 +21,6 @@ class people::spikeheap {
 	include vlc
 	include watts
 	include postgresql
-	include apachedirectorystudio
-	include mysql_workbench
-	include heroku_toolbelt
 	include hipchat
 	include skype
 	include cyberduck
