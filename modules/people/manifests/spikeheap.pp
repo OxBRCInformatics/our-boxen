@@ -1,7 +1,7 @@
 class people::spikeheap {
 	# TODO add to puppetfile
   include emacs   
-	include osx
+#	include osx
 	include zsh
 	include chrome
 	include firefox
@@ -19,7 +19,6 @@ class people::spikeheap {
 	include skype
 	include caffeine
 	include istatmenus3
-	include spotify
 	include vlc
 	include watts
 	include postgresql
@@ -69,7 +68,7 @@ class people::spikeheap {
   }
 
 	### This really shoudl be a shell script. DO IT!
-	-> people::jfryman::dotfile::link { $env['dotfiles']:
+	-> people::spikeheap::dotfile::link { $env['dotfiles']:
 	  source_dir => $env['directories']['dotfiles'],
 	  dest_dir   => $env['directories']['home'],
 	}
