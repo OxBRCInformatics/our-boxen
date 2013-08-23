@@ -35,7 +35,6 @@ github "sudo",       "1.0.0"
 github "xquartz",    "1.1.0"
 
 github "emacs"
-github "sparrow"
 github "zsh"
 github "chrome::stable"
 github "onepassword"
@@ -60,6 +59,9 @@ github "mysql_workbench"
 github "heroku_toolbelt"
 github "firefox"
 github "libreoffice"
+github "hipchat
+github "skype"
+github "cyberduck"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
