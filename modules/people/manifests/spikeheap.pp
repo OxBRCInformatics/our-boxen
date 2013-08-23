@@ -1,7 +1,6 @@
 class people::spikeheap {
 	# TODO add to puppetfile
   include emacs   
-  include sparrow 
 	include zsh
 	include chrome::stable
 	include firefox
@@ -13,7 +12,7 @@ class people::spikeheap {
 	include homebrew
 	include iterm2::dev
 	include libreoffice
-	#include java # We don't want version 7 by default
+	include java
 	include textmate
 	include virtualbox
 	include skype
