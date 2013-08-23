@@ -18,7 +18,6 @@ class people::spikeheap {
 	include skype
 	include caffeine
 	include istatmenus3
-	include spotify
 	include vlc
 	include watts
 	include postgresql
