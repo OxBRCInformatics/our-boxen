@@ -1,9 +1,8 @@
 class people::spikeheap {
 	# TODO add to puppetfile
   include emacs   
-#	include osx
 	include zsh
-	include chrome
+	include chrome::stable
 	include firefox
 	include onepassword
 	include dropbox
@@ -19,9 +18,13 @@ class people::spikeheap {
 	include skype
 	include caffeine
 	include istatmenus3
+	include spotify
 	include vlc
 	include watts
 	include postgresql
+	include apachedirectorystudio
+	include mysql_workbench
+	include heroku_toolbelt
 	include hipchat
 	include skype
 	include cyberduck
@@ -33,8 +36,8 @@ class people::spikeheap {
   # Configuration Setup
   $env = {
     directories => {
-      home      => '/Users/jamison',
-      dotfiles  => '/Users/jamison/.dotfiles'
+      home      => '/Users/${::luser}',
+      dotfiles  => '/Users/${::luser}/.dotfiles'
     },
     dotfiles => [
       'aliases',
