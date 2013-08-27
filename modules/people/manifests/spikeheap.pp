@@ -246,7 +246,16 @@ class people::spikeheap {
    #  command => 'spctl --master-disable',
    #  unless  => 'spctl --status | grep disabled',
    #}
- 
+   
+   osx::recovery_message { 'If this Mac is found, please call 07841 757984': }
+   include osx::dock::autohide
+   include osx::dock::clear_dock
+   include osx::finder::unhide_library
+
+   class { 'osx::dock::icon_size': 
+     size => 36
+   }
+
    # End Config
    ####################
 }
