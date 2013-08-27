@@ -32,8 +32,8 @@ class people::spikeheap {
   # Configuration Setup
   $env = {
     directories => {
-      home      => '/Users/${::luser}',
-      dotfiles  => '/Users/${::luser}/.dotfiles'
+      home      => "/Users/${::luser}",
+      dotfiles  => "/Users/${::luser}/.dotfiles"
     },
     dotfiles => [
       'aliases',
@@ -42,7 +42,7 @@ class people::spikeheap {
       'janus/jellybeans',
       'janus/vim-rails',
       'vimrc.after',
-      'zshrc',
+      #'zshrc',
     ],
     packages => {
       brew   => [
