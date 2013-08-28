@@ -89,6 +89,8 @@ node default {
     target => $boxen::config::repodir
   }
 
+  include virtualbox
   include vagrant
+
   include netbeans
 }

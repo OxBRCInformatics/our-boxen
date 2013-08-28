@@ -15,6 +15,7 @@ end
 
 github "boxen",      "3.0.2"
 
+github "virtualbox", "1.0.5"
 github "vagrant",	"2.0.10"
 github "netbeans",	"1.0.0"
 
