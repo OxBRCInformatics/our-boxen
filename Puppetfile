@@ -15,6 +15,9 @@ end
 
 github "boxen",      "3.0.2"
 
+github "vagrant",	"2.0.10"
+github "netbeans",	"1.0.0"
+
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
 github "osx",		"1.6.0"
