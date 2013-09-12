@@ -249,6 +249,7 @@ DEPENDENCIES
   textmate (= 1.1.0)
   vagrant (= 2.0.10)
   virtualbox (= 1.0.5)
+  virtualbox (= 1.0.5)
   vlc (= 1.0.4)
   watts (= 1.0.0)
   xquartz (= 1.1.0)
