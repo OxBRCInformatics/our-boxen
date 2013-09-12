@@ -11,8 +11,8 @@ class people::spikeheap {
 	include zsh
 	include homebrew
 	include iterm2::dev
-	include libreoffice
-	include java
+  #include libreoffice
+  #include java
 	include textmate
 	include virtualbox
 	include skype
@@ -39,10 +39,11 @@ class people::spikeheap {
       'aliases',
       'functions',
       'gitconfig',
-      'janus/jellybeans',
-      'janus/vim-rails',
+      #'janus/jellybeans',
+      #'janus/vim-rails',
       'vimrc.after',
       #'zshrc',
+      'zshenv'
     ],
     packages => {
       brew   => [
@@ -96,18 +97,18 @@ class people::spikeheap {
 
 	
 	# TODO
-	file {
- 		"/Users/${::boxen_user}/.ssh":
- 		  ensure => directory;
- 		"/Users/${::boxen_user}/.ssh/config":
- 		  source => 'puppet:///modules/people/wfarr/ssh_config';
-	}
+  #	file {
+  #		"/Users/${::boxen_user}/.ssh":
+  #	  ensure => directory;
+  #	"/Users/${::boxen_user}/.ssh/config":
+  #	  source => 'puppet:///modules/people/wfarr/ssh_config';
+  #}
 	
 	# TODO
-	file { "/Users/${::luser}/.gitignore":
-		ensure => present,
-		source => 'puppet:///modules/people/spikeheap/gitignore'
-	}
+  #file { "/Users/${::luser}/.gitignore":
+  #		ensure => present,
+  #   source => 'puppet:///modules/people/spikeheap/gitignore'
+  #}
 	
 	
 	
@@ -159,7 +160,7 @@ class people::spikeheap {
      ensure  => link,
      target  => "/Users/${::luser}/.oh-my-zsh/templates/zshrc.zsh-template",
      require => Repository['oh-my-zsh']
-	 }
+   }
 	 
    ####################
    # Start Config
