@@ -13,7 +13,7 @@ class people::spikeheap {
 	include iterm2::dev
   #include libreoffice
   #include java
-	include textmate
+  include textmate::textmate2::beta
 	include virtualbox
 	include skype
 	include caffeine
