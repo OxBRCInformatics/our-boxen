@@ -1,34 +1,32 @@
 class people::spikeheap {
-	# TODO add to puppetfile
-  include emacs   
-	include zsh
-	include chrome
-	include firefox
-	include onepassword
-	include dropbox
-	include alfred
-	include macvim
-	include zsh
-	include homebrew
-	include iterm2::dev
-  #include libreoffice
-  #include java
+  # TODO add to puppetfile
+    
+  include zsh
+  include chrome
+  include firefox
+  include onepassword
+  include dropbox
+  include alfred
+  include zsh
+  include homebrew
+  include iterm2::dev
   include textmate::textmate2::beta
-	include virtualbox
-	include skype
-	include caffeine
-	include istatmenus3
-	include vlc
-	include watts
-	include postgresql
-	include hipchat
-	include skype
-	include cyberduck
+  include virtualbox
+  include skype
+  include istatmenus3
+  include vlc
+  include postgresql
+  include hipchat
+  include skype
+  include cyberduck
 
-	# Projects
-	# e.g. include projects::puppet
-	
-	
+  #include libreoffice
+  
+  
+  # Projects
+  # e.g. include projects::puppet
+  
+  
   # Configuration Setup
   $env = {
     directories => {
@@ -47,7 +45,7 @@ class people::spikeheap {
     ],
     packages => {
       brew   => [
-				'bash',
+        'bash',
         'wget',
         'gpg2',
         'tmux'
@@ -59,77 +57,77 @@ class people::spikeheap {
   package { $env['packages']['brew']:
     provider => 'homebrew',
   }
-	
-	# Dotfile Setup
-	# TODO point to Bitbucket
+  
+  # Dotfile Setup
+  # TODO point to Bitbucket
   repository { 'spikeheap-dotfiles':
     source  => 'spikeheap/dotfiles',
     path    => "${env['directories']['dotfiles']}",
   }
 
-	### This really shoudl be a shell script. DO IT!
-	-> people::spikeheap::dotfile::link { $env['dotfiles']:
-	  source_dir => $env['directories']['dotfiles'],
-	  dest_dir   => $env['directories']['home'],
-	}
+  ### This really shoudl be a shell script. DO IT!
+  -> people::spikeheap::dotfile::link { $env['dotfiles']:
+    source_dir => $env['directories']['dotfiles'],
+    dest_dir   => $env['directories']['home'],
+  }
  
-	# Install Janus
-	repository { 'janus':
-	  source => 'carlhuda/janus',
-	  path   => "${env['directories']['home']}/.vim",
-	}
-	~> exec { 'Boostrap Janus':
-	  command     => 'rake',
-	  cwd         => "${env['directories']['home']}/.vim",
-	  refreshonly => true,
-	  environment => [
-	    "HOME=${env['directories']['home']}",
-	  ],
-	}
+  # Install Janus
+  repository { 'janus':
+    source => 'carlhuda/janus',
+    path   => "${env['directories']['home']}/.vim",
+  }
+  ~> exec { 'Boostrap Janus':
+    command     => 'rake',
+    cwd         => "${env['directories']['home']}/.vim",
+    refreshonly => true,
+    environment => [
+      "HOME=${env['directories']['home']}",
+    ],
+  }
  
-	# Misc Helpers until I can figure out where to put this
-	define dotfile::link($source_dir, $dest_dir) {
-	  file { "${dest_dir}/.${name}":
-	    ensure => symlink,
-	    target => "${source_dir}/${name}",
-	  }
-	}
+  # Misc Helpers until I can figure out where to put this
+  define dotfile::link($source_dir, $dest_dir) {
+    file { "${dest_dir}/.${name}":
+      ensure => symlink,
+      target => "${source_dir}/${name}",
+    }
+  }
 
-	
-	# TODO
-  #	file {
-  #		"/Users/${::boxen_user}/.ssh":
-  #	  ensure => directory;
-  #	"/Users/${::boxen_user}/.ssh/config":
-  #	  source => 'puppet:///modules/people/wfarr/ssh_config';
+  
+  # TODO
+  #  file {
+  #    "/Users/${::boxen_user}/.ssh":
+  #    ensure => directory;
+  #  "/Users/${::boxen_user}/.ssh/config":
+  #    source => 'puppet:///modules/people/wfarr/ssh_config';
   #}
-	
-	# TODO
+  
+  # TODO
   #file { "/Users/${::luser}/.gitignore":
-  #		ensure => present,
+  #    ensure => present,
   #   source => 'puppet:///modules/people/spikeheap/gitignore'
   #}
-	
-	
-	
+  
+  
+  
 
-	# Sane Defaults
-	Boxen::Osx_defaults {
-		user => $::luser,
-	}
+  # Sane Defaults
+  Boxen::Osx_defaults {
+    user => $::luser,
+  }
 
-	case $::hostname {
-		'airic': {
-		  
-		}
-		'ryan-imac': {
-		  include projects::all
-		}
-		default: {}
-	}
-		
+  case $::hostname {
+    'airic': {
+      
+    }
+    'ryan-imac': {
+      include projects::all
+    }
+    default: {}
+  }
+    
   #$home     = "/Users/${::boxen_user}"
-	$home     = "/Users/${::luser}"
+  $home     = "/Users/${::luser}"
   $my       = "${home}/my"
   $dotfiles = "${my}/dotfiles"
   
@@ -138,18 +136,18 @@ class people::spikeheap {
   }
 
 
-	
-	git::config::global {
-	  'alias.st':   value => 'status';
-	  'alias.ci':   value => 'commit';
-	  'alias.co':   value => 'checkout';
-	  'alias.di':   value => 'diff';
-	  'alias.dc':   value => 'diff --cached';
-	  'alias.lp':   value => 'log -p';
-	  'color.ui':   value => 'true';
-	  'user.name':  value => 'Ryan Brooks';
-	  'user.email': value => 'ryanbrooksis@gmail.com';
-	}
+  
+  git::config::global {
+    'alias.st':   value => 'status';
+    'alias.ci':   value => 'commit';
+    'alias.co':   value => 'checkout';
+    'alias.di':   value => 'diff';
+    'alias.dc':   value => 'diff --cached';
+    'alias.lp':   value => 'log -p';
+    'color.ui':   value => 'true';
+    'user.name':  value => 'Ryan Brooks';
+    'user.email': value => 'ryanbrooksis@gmail.com';
+  }
 
   repository { 'oh-my-zsh':
      source => 'spikeheap/oh-my-zsh',
@@ -161,7 +159,7 @@ class people::spikeheap {
      target  => "/Users/${::luser}/.oh-my-zsh/templates/zshrc.zsh-template",
      require => Repository['oh-my-zsh']
    }
-	 
+   
    ####################
    # Start Config
  
