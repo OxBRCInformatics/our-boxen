@@ -92,9 +92,4 @@ node default {
     ensure => link,
     target => $boxen::config::repodir
   }
-
-  include virtualbox
-  include vagrant
-
-  include netbeans
 }
