@@ -1,25 +1,29 @@
 class people::spikeheap {
-  # TODO add to puppetfile
     
-  include zsh
   include chrome
   include firefox
   include onepassword
   include dropbox
   include alfred
+  
   include zsh
   include homebrew
   include iterm2::dev
-  include textmate::textmate2::beta
-  include virtualbox
-  include skype
+
   include istatmenus3
   include vlc
   include postgresql
   include hipchat
   include skype
-  include cyberduck
 
+  include cyberduck
+  
+  include virtualbox
+  include vagrant
+  
+  include netbeans
+  include textmate::textmate2::beta
+  
   #include libreoffice
   
   
