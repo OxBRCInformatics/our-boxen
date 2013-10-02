@@ -7,7 +7,6 @@ class people::spikeheap {
   include alfred
   
   include zsh
-  include homebrew
   include iterm2::dev
 
   include istatmenus3
