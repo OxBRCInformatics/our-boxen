@@ -49,6 +49,7 @@ Service {
   provider => ghlaunchd
 }
 
+include homebrew
 Homebrew::Formula <| |> -> Package <| |>
 
 node default {
