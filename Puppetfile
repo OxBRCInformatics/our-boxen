@@ -15,13 +15,9 @@ end
 
 github "boxen",      "3.0.2"
 
-github "virtualbox", "1.0.5"
-github "vagrant",	"2.0.10"
-github "netbeans",	"1.0.0"
-
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
-github "osx",		"1.6.0"
+
 github "autoconf",   "1.0.0"
 github "dnsmasq",    "1.0.0"
 github "gcc",        "2.0.1"
@@ -37,34 +33,6 @@ github "ruby",       "6.3.4"
 github "stdlib",     "4.1.0", :repo => "puppetlabs/puppetlabs-stdlib"
 github "sudo",       "1.0.0"
 github "xquartz",    "1.1.0"
-
-github "property_list_key", "0.1.0", :repo => "glarizza/puppet-property_list_key"
-
-github "emacs",		"1.1.0"
-github "zsh",		"1.0.0"
-github "chrome","1.1.1"
-github "onepassword",	"1.0.2"
-github "dropbox", 	"1.1.1"
-github "alfred",	"1.1.2"
-github "macvim",	"1.0.0"
-github "zsh",		"1.0.0"
-github "homebrew",	"1.4.1"
-github "iterm2",	"1.0.3"
-github "java",		"1.1.2"
-github "textmate",	"1.1.0"
-github "virtualbox",	"1.0.5"
-github "skype",		"1.0.4"
-github "caffeine",	"1.0.0"
-github "istatmenus3",	"1.0.1"
-github "vlc",		"1.0.4"
-github "watts",		"1.0.0"
-github "sysctl",	"1.0.0"
-github "postgresql",	"2.0.1"
-github "firefox",	"1.1.2"
-github "libreoffice",	"4.1.0"
-github "hipchat",	"1.0.8"
-github "skype",		"1.0.4"
-github "cyberduck",	"1.0.1"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
