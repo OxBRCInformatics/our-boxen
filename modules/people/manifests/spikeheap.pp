@@ -19,7 +19,7 @@ class people::spikeheap {
   include virtualbox
   include vagrant
   
-  include eclipse
+  include eclipse::java
   include netbeans
   include textmate::textmate2::beta
    
