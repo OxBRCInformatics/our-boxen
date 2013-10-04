@@ -36,3 +36,21 @@ github "xquartz",    "1.1.0"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
+
+github "alfred",     "1.1.5"
+github "dropbox",    "1.1.1"
+github "chrome",     "1.1.1"
+github "firefox",    "1.1.1"
+github "onepassword","1.0.2"
+github "zsh",        "1.0.0"
+github "iterm2",     "1.0.3"
+github "vlc",        "1.0.5"
+github "postgresql", "2.0.1"
+github "hipchat",    "1.0.8"
+github "skype",      "1.0.5"
+github "cyberduck",  "1.0.1"
+github "virtualbox", "1.0.6"
+github "vagrant",    "2.0.12"
+github "netbeans",   "1.0.0"
+github "eclipse",    "2.2.0"
+github "textmate",   "1.1.0"
