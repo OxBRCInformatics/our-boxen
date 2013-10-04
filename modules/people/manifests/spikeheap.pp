@@ -9,7 +9,6 @@ class people::spikeheap {
   include zsh
   include iterm2::dev
 
-  include istatmenus3
   include vlc
   include postgresql
   include hipchat
@@ -20,6 +19,7 @@ class people::spikeheap {
   include virtualbox
   include vagrant
   
+  include eclipse
   include netbeans
   include textmate::textmate2::beta
    
