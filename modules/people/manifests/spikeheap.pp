@@ -72,29 +72,29 @@ class people::spikeheap {
   }
 
   ### This really should be a shell script. DO IT!
-  #-> people::spikeheap::dotfile::link { $env['dotfiles']:
-  #  source_dir => $env['directories']['dotfiles'],
-  #  dest_dir   => $env['directories']['home'],
-  #}
+  -> people::spikeheap::dotfile::link { $env['dotfiles']:
+    source_dir => $env['directories']['dotfiles'],
+    dest_dir   => $env['directories']['home'],
+  }
  
-  #repository { 'oh-my-zsh':
-  #   source => 'spikeheap/oh-my-zsh',
-  #   path   => "/Users/${::luser}/.oh-my-zsh"
-  #}
+  repository { 'oh-my-zsh':
+     source => 'spikeheap/oh-my-zsh',
+     path   => "/Users/${::luser}/.oh-my-zsh"
+  }
  
-   #file { "/Users/${::luser}/.zshrc":
-   #  ensure  => link,
-   #  target  => "/Users/${::luser}/.oh-my-zsh/templates/zshrc.zsh-template",
-   #  require => Repository['oh-my-zsh']
-   #}
+  file { "/Users/${::luser}/.zshrc":
+    ensure  => link,
+    target  => "/Users/${::luser}/.oh-my-zsh/templates/zshrc.zsh-template",
+    require => Repository['oh-my-zsh']
+  }
  
   # Misc Helpers until I can figure out where to put this
-  #define dotfile::link($source_dir, $dest_dir) {
-  #  file { "${dest_dir}/.${name}":
-  #    ensure => symlink,
-  #    target => "${source_dir}/${name}",
-  #  }
-  #}
+  define dotfile::link($source_dir, $dest_dir) {
+    file { "${dest_dir}/.${name}":
+      ensure => symlink,
+      target => "${source_dir}/${name}",
+    }
+  }
 
   
   # TODO SSH config

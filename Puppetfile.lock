@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: boxen/puppet-alfred
+  specs:
+    alfred (1.1.5)
+
+GITHUBTARBALL
   remote: boxen/puppet-autoconf
   specs:
     autoconf (1.0.0)
@@ -7,6 +12,16 @@ GITHUBTARBALL
   remote: boxen/puppet-boxen
   specs:
     boxen (3.0.2)
+
+GITHUBTARBALL
+  remote: boxen/puppet-chrome
+  specs:
+    chrome (1.1.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-cyberduck
+  specs:
+    cyberduck (1.0.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-dnsmasq
@@ -19,14 +34,14 @@ GITHUBTARBALL
     dropbox (1.1.1)
 
 GITHUBTARBALL
-  remote: boxen/puppet-emacs
+  remote: boxen/puppet-eclipse
   specs:
-    emacs (1.1.0)
+    eclipse (2.2.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-firefox
   specs:
-    firefox (1.1.2)
+    firefox (1.1.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-gcc
@@ -39,6 +54,11 @@ GITHUBTARBALL
     git (1.2.5)
 
 GITHUBTARBALL
+  remote: boxen/puppet-hipchat
+  specs:
+    hipchat (1.0.8)
+
+GITHUBTARBALL
   remote: boxen/puppet-homebrew
   specs:
     homebrew (1.4.1)
@@ -47,6 +67,16 @@ GITHUBTARBALL
   remote: boxen/puppet-hub
   specs:
     hub (1.0.3)
+
+GITHUBTARBALL
+  remote: boxen/puppet-iterm2
+  specs:
+    iterm2 (1.0.3)
+
+GITHUBTARBALL
+  remote: boxen/puppet-netbeans
+  specs:
+    netbeans (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-nginx
@@ -59,9 +89,29 @@ GITHUBTARBALL
     nodejs (3.2.9)
 
 GITHUBTARBALL
+  remote: boxen/puppet-onepassword
+  specs:
+    onepassword (1.0.2)
+
+GITHUBTARBALL
   remote: boxen/puppet-openssl
   specs:
     openssl (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-osx
+  specs:
+    osx (1.6.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-postgresql
+  specs:
+    postgresql (2.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-property_list_key
+  specs:
+    property_list_key (0.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-repository
@@ -74,14 +124,49 @@ GITHUBTARBALL
     ruby (6.3.4)
 
 GITHUBTARBALL
+  remote: boxen/puppet-skype
+  specs:
+    skype (1.0.5)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-sysctl
+  specs:
+    sysctl (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-textmate
+  specs:
+    textmate (1.1.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-vagrant
+  specs:
+    vagrant (2.0.12)
+
+GITHUBTARBALL
+  remote: boxen/puppet-virtualbox
+  specs:
+    virtualbox (1.0.6)
+
+GITHUBTARBALL
+  remote: boxen/puppet-vlc
+  specs:
+    vlc (1.0.5)
+
+GITHUBTARBALL
   remote: boxen/puppet-xquartz
   specs:
     xquartz (1.1.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-zsh
+  specs:
+    zsh (1.0.0)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
@@ -94,20 +179,40 @@ GITHUBTARBALL
     stdlib (4.1.0)
 
 DEPENDENCIES
+  alfred (= 1.1.5)
   autoconf (= 1.0.0)
   boxen (= 3.0.2)
+  chrome (= 1.1.1)
+  cyberduck (= 1.0.1)
   dnsmasq (= 1.0.0)
+  dropbox (= 1.1.1)
+  eclipse (= 2.2.0)
+  firefox (= 1.1.1)
   gcc (= 2.0.1)
   git (= 1.2.5)
+  hipchat (= 1.0.8)
   homebrew (= 1.4.1)
   hub (= 1.0.3)
   inifile (= 1.0.0)
+  iterm2 (= 1.0.3)
+  netbeans (= 1.0.0)
   nginx (= 1.4.2)
   nodejs (= 3.2.9)
+  onepassword (= 1.0.2)
   openssl (= 1.0.0)
+  osx (= 1.6.0)
+  postgresql (= 2.0.1)
+  property_list_key (= 0.1.0)
   repository (= 2.2.0)
   ruby (= 6.3.4)
+  skype (= 1.0.5)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
+  sysctl (= 1.0.0)
+  textmate (= 1.1.0)
+  vagrant (= 2.0.12)
+  virtualbox (= 1.0.6)
+  vlc (= 1.0.5)
   xquartz (= 1.1.0)
+  zsh (= 1.0.0)
 
