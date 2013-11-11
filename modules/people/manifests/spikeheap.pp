@@ -11,6 +11,7 @@ class people::spikeheap {
 
   include vlc
   include postgresql
+  include mysql
   include hipchat
   include skype
 
@@ -24,6 +25,24 @@ class people::spikeheap {
   include textmate::textmate2::beta
   include jenkins
    
+  include mongodb
+  #include adobe_reader
+  #include emacs
+  #include spotify
+  include gimp
+  
+  $nodejs_modules = [
+    'coffee-script',
+	'express',
+	'jade',
+	'mongojs',
+	'stylus'
+  ]
+  nodejs::module { $nodejs_modules :
+    node_version => 'v0.10',
+	ensure       => installed,
+  }
+
   
   # Projects
   # e.g. include projects::puppet
