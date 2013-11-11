@@ -69,12 +69,16 @@ node default {
   #include nodejs::v0_8
   include nodejs::v0_10
 
+  class { 'nodejs::global':
+    version => 'v0.10'
+  }
+
   # default ruby versions
   #include ruby::1_8_7
   #include ruby::1_9_2
   include ruby::1_9_3_p194
   #include ruby::2_0_0
-
+  
   class { 'ruby::global':
       version => '1.9.3-p194'
   }
