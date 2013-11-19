@@ -12,6 +12,7 @@ class people::spikeheap {
   include vlc
   include postgresql
   include mysql
+  include mysql_workbench
   include hipchat
   include skype
 

@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: boxen/puppet-adobe_reader
+  specs:
+    adobe_reader (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
     alfred (1.1.5)
@@ -39,6 +44,11 @@ GITHUBTARBALL
     eclipse (2.2.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-emacs
+  specs:
+    emacs (1.1.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-firefox
   specs:
     firefox (1.1.1)
@@ -47,6 +57,11 @@ GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
     gcc (2.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-gimp
+  specs:
+    gimp (1.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-git
@@ -77,6 +92,16 @@ GITHUBTARBALL
   remote: boxen/puppet-jenkins
   specs:
     jenkins (0.0.7)
+
+GITHUBTARBALL
+  remote: boxen/puppet-mongodb
+  specs:
+    mongodb (1.0.5)
+
+GITHUBTARBALL
+  remote: boxen/puppet-mysql
+  specs:
+    mysql (1.1.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-netbeans
@@ -134,6 +159,11 @@ GITHUBTARBALL
     skype (1.0.5)
 
 GITHUBTARBALL
+  remote: boxen/puppet-spotify
+  specs:
+    spotify (1.0.1)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -174,6 +204,11 @@ GITHUBTARBALL
     zsh (1.0.0)
 
 GITHUBTARBALL
+  remote: freakphp/puppet-mysql_workbench
+  specs:
+    mysql_workbench (1.0.3)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.0.0)
@@ -184,6 +219,7 @@ GITHUBTARBALL
     stdlib (4.1.0)
 
 DEPENDENCIES
+  adobe_reader (= 1.1.0)
   alfred (= 1.1.5)
   autoconf (= 1.0.0)
   boxen (= 3.0.2)
@@ -192,8 +228,10 @@ DEPENDENCIES
   dnsmasq (= 1.0.0)
   dropbox (= 1.1.1)
   eclipse (= 2.2.0)
+  emacs (= 1.1.0)
   firefox (= 1.1.1)
   gcc (= 2.0.1)
+  gimp (= 1.0.0)
   git (= 1.2.5)
   hipchat (= 1.0.8)
   homebrew (= 1.4.1)
@@ -201,6 +239,9 @@ DEPENDENCIES
   inifile (= 1.0.0)
   iterm2 (= 1.0.3)
   jenkins (= 0.0.7)
+  mongodb (= 1.0.5)
+  mysql (= 1.1.5)
+  mysql_workbench (= 1.0.3)
   netbeans (= 1.0.0)
   nginx (= 1.4.2)
   nodejs (= 3.2.9)
@@ -212,6 +253,7 @@ DEPENDENCIES
   repository (= 2.2.0)
   ruby (= 6.3.4)
   skype (= 1.0.5)
+  spotify (= 1.0.1)
   stdlib (= 4.1.0)
   sudo (= 1.0.0)
   sysctl (= 1.0.0)
