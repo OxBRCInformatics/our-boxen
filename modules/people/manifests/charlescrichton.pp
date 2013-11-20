@@ -37,7 +37,8 @@ class people::charlescrichton {
 	'express',
 	'jade',
 	'mongojs',
-	'stylus'
+	'stylus',
+	'less'
   ]
   nodejs::module { $nodejs_modules :
     node_version => 'v0.10',
