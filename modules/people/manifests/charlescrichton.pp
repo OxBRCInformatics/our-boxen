@@ -1,3 +1,7 @@
+#To rerun the file to get the config run
+#cd /opt/boxen/repo
+#./script/boxen  --no-fde
+
 class people::charlescrichton {
     
   include chrome
@@ -80,7 +84,8 @@ class people::charlescrichton {
         'tmux',
         'aspell',
         'libpng',
-        'qt'
+        'qt',
+		'sonar'
       ]
     }
   }
