@@ -25,7 +25,7 @@ class people::charlescrichton {
   include virtualbox
   include vagrant
   
-  include eclipse::ggts
+  include eclipse::java
   include netbeans
   include textmate::textmate2::beta
   include jenkins
