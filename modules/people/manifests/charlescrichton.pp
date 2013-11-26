@@ -73,7 +73,7 @@ class people::charlescrichton {
       #'janus/jellybeans',
       #'janus/vim-rails',
       'vimrc.after',
-      #'zshrc',
+      'zshrc',
       'zshenv'
     ],
     packages => {
@@ -85,7 +85,9 @@ class people::charlescrichton {
         'aspell',
         'libpng',
         'qt',
-		'sonar'
+		'sonar',
+		'git-flow',
+		'bash-completion'
       ]
     }
   }
@@ -112,11 +114,11 @@ class people::charlescrichton {
      path   => "/Users/${::luser}/.oh-my-zsh"
   }
  
-  file { "/Users/${::luser}/.zshrc":
-    ensure  => link,
-    target  => "/Users/${::luser}/.oh-my-zsh/templates/zshrc.zsh-template",
-    require => Repository['oh-my-zsh']
-  }
+  #file { "/Users/${::luser}/.zshrc":
+  #  ensure  => link,
+  #  target  => "/Users/${::luser}/.oh-my-zsh/templates/zshrc.zsh-template",
+  #  require => Repository['oh-my-zsh']
+  #}
  
   # Misc Helpers until I can figure out where to put this
   define dotfile::link($source_dir, $dest_dir) {
@@ -130,18 +132,18 @@ class people::charlescrichton {
   # TODO SSH config
   # TODO Gitignore
 
-  git::config::global {
-    'alias.st':   value => 'status';
-    'alias.ci':   value => 'commit';
-    'alias.co':   value => 'checkout';
-    'alias.di':   value => 'diff';
-    'alias.dc':   value => 'diff --cached';
-    'alias.lp':   value => 'log -p';
-    'color.ui':   value => 'true';
-    'user.name':  value => 'Charles Crichton';
-    'user.email': value => 'charles.crichton@ndm.ox.ac.uk';
-  }
-
+#  git::config::global {
+#    'alias.st':   value => 'status';
+#    'alias.ci':   value => 'commit';
+#    'alias.co':   value => 'checkout';
+#    'alias.di':   value => 'diff';
+#    'alias.dc':   value => 'diff --cached';
+#    'alias.lp':   value => 'log -p';
+#    'color.ui':   value => 'true';
+#    'user.name':  value => 'Charles Crichton';
+#    'user.email': value => 'charles.crichton@ndm.ox.ac.uk';
+#  }
+#
 
    
    ####################
