@@ -207,7 +207,7 @@ class people::charlescrichton {
    }
 
    include osx::dock::autohide
-   #include osx::dock::clear_dock
+   include osx::dock::clear_dock
    include osx::finder::unhide_library
 
    class { 'osx::dock::icon_size': 
