@@ -36,6 +36,8 @@ class people::charlescrichton {
   #include spotify
   include gimp
   
+  include groovy
+  
   $nodejs_modules = [
     'coffee-script',
 	'express',
