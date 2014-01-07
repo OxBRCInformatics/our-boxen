@@ -68,7 +68,7 @@ class people::spikeheap {
       #'janus/jellybeans',
       #'janus/vim-rails',
       'vimrc.after',
-      #'zshrc',
+      'zshrc',
       'zshenv'
     ],
     packages => {
@@ -101,12 +101,6 @@ class people::spikeheap {
   repository { 'oh-my-zsh':
      source => 'spikeheap/oh-my-zsh',
      path   => "/Users/${::luser}/.oh-my-zsh"
-  }
- 
-  file { "/Users/${::luser}/.zshrc":
-    ensure  => link,
-    target  => "/Users/${::luser}/.oh-my-zsh/templates/zshrc.zsh-template",
-    require => Repository['oh-my-zsh']
   }
  
   # Misc Helpers until I can figure out where to put this
