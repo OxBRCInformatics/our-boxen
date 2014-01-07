@@ -1,30 +1,33 @@
 class people::spikeheap {
-    
+  
+  # Standard applications
   include chrome
   include firefox
-  include onepassword
-  include dropbox
-  include alfred
-  
-  include zsh
-  include iterm2::dev
-
   include vlc
   include postgresql
   include mysql
   include mysql_workbench
-  include hipchat
-  include skype
-
   include cyberduck
+
+  include skype
+  include dropbox
+  include alfred
+ 
+  include intellij
+  include eclipse::ggts
+  include netbeans
+  include textmate::textmate2::beta
   
+  include jenkins
+
+  # Personal preference 
+  include onepassword
+  include zsh
+  include iterm2::dev
   include virtualbox
   include vagrant
   
-  include eclipse::java
-  include netbeans
-  include textmate::textmate2::beta
-  include jenkins
+
    
   include mongodb
   #include adobe_reader
@@ -34,14 +37,14 @@ class people::spikeheap {
   
   $nodejs_modules = [
     'coffee-script',
-	'express',
-	'jade',
-	'mongojs',
-	'stylus'
+    'express',
+    'jade',
+    'mongojs',
+    'stylus'
   ]
   nodejs::module { $nodejs_modules :
     node_version => 'v0.10',
-	ensure       => installed,
+    ensure       => installed,
   }
 
   
@@ -65,8 +68,6 @@ class people::spikeheap {
       'aliases',
       'functions',
       'gitconfig',
-      #'janus/jellybeans',
-      #'janus/vim-rails',
       'vimrc.after',
       'zshrc',
       'zshenv'
@@ -76,15 +77,23 @@ class people::spikeheap {
         'bash',
         'wget',
         'gpg2',
-        'tmux'
+        'tmux',
+        'smartypants',
+        'multimarkdown',
+        'freetype',
+        'gitflow',
+        'bash-completion',
+        'wget',
+        'maven',
+        'sonar'
       ]
     }
   }
  
   # Install Brew Applications
-  #package { $env['packages']['brew']:
-  #  provider => 'homebrew',
-  #}
+  package { $env['packages']['brew']:
+    provider => 'homebrew',
+  }
   
   # Dotfile Setup
   repository { 'spikeheap-dotfiles':
@@ -110,10 +119,6 @@ class people::spikeheap {
       target => "${source_dir}/${name}",
     }
   }
-
-  
-  # TODO SSH config
-  # TODO Gitignore
 
   git::config::global {
     'alias.st':   value => 'status';
