@@ -40,7 +40,12 @@ class people::spikeheap {
     'express',
     'jade',
     'mongojs',
-    'stylus'
+    'stylus',
+    'karma',
+    'bower',
+    'travis',
+    'yo',
+    'grunt'
   ]
   nodejs::module { $nodejs_modules :
     node_version => 'v0.10',
@@ -54,7 +59,9 @@ class people::spikeheap {
     'ryan-imac': {
       include projects::all
     }
-    default: {}
+    default: {
+      include projects::modelcatalogue
+    }
   }
   
   
@@ -85,8 +92,13 @@ class people::spikeheap {
         'bash-completion',
         'wget',
         'maven',
-        'sonar'
-      ]
+        'sonar',
+        'freetype',
+        'rabbitmq'
+      ],
+      gem    => [
+      'heroku'
+      ],
     }
   }
  
