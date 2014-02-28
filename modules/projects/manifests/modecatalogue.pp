@@ -1,10 +1,10 @@
 class projects::mdr {
   
 
-  boxen::project { 'mdr':
+  boxen::project { 'mc':
     #dotenv        => true,
     #elasticsearch => true,
     #mysql         => true,
-    source        => 'amilward/MDR'
+    source        => 'modelcatalogue/ModelCatalogue'
   }
 }
