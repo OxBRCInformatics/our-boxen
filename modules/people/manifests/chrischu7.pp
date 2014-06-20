@@ -63,18 +63,6 @@ class people::chrischu7 {
   }
 
   
-  # Projects
-  # e.g. include projects::puppet
-  case $::hostname {
-    'ryan-imac': {
-      include projects::all
-    }
-    default: {
-      include projects::modelcatalogue
-    }
-  }
-  
-  
   # Configuration Setup
   $env = {
     directories => {
@@ -100,10 +88,8 @@ class people::chrischu7 {
         'freetype',
         'gitflow',
         'bash-completion',
-        'wget',
         'maven',
         'sonar',
-        'freetype',
         'rabbitmq'
       ],
       gem    => [
